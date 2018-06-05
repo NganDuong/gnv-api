@@ -27,7 +27,8 @@ Use to get shipper's current PRS statistics.
         "picked": 0,
         "picking": 1,
         "failed": 0,
-        "total": 1
+        "total": 1,
+        "total_cash": 0
     },
     "paging": [],
     "message": "Calculated"

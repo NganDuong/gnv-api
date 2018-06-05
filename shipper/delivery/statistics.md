@@ -27,7 +27,8 @@ Use to get shipper's current DRS statistics.
         "delivered": 0,
         "delivering": 0,
         "failed": 0,
-        "total": 0
+        "total": 0,
+        "total_cash": 0
     },
     "paging": [],
     "message": "Calculated"
