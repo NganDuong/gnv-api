@@ -2,8 +2,8 @@
 
 1. Đăng nhập.
 	- API: /users/login
-	- [Detail](../user/login.md)
-	- Example notify: [Detail](../order/notification.md).
+	- [Detail](user/login.md)
+	- Example notify: [Detail](order/notification.md).
 2. Đăng ký push notification token.
 	- API: /users/notifications/register
 	- [Detail](../user/register_push_token.md).
