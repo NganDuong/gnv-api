@@ -71,7 +71,7 @@
 				- Địa chỉ lấy hàng: sender_address, sender_location_id, sender_longitude, sender_latitude, sender_address_detail
 				- Tổng số đơn hàng: total
 				- Danh sách các đơn hàng.
-		- API: /orders/pickup?sender_address={address number/street}&sender_location_id={id}
+		- API: /orders/pickup?sender_address={address number/street}&sender_location_id={id}&sender_phone={phone number}
 		- [Detail](/shipper/pickup/pickup_location_detail.md)
 	7. Xem thông tin đơn hàng:
 		- Mô tả:
@@ -155,7 +155,7 @@
 				- Địa chỉ giao hàng: receiver_address
 				- Tổng số đơn hàng: total
 				- Danh sách các đơn hàng.
-		- API: /orders/delivery?receiver_address={address number/street}&receiver_location_id={id}
+		- API: /orders/delivery?receiver_address={address number/street}&receiver_location_id={id}&receiver_phone={phone number}
 		- [Detail](/shipper/delivery/delivery_location_detail.md)
 	7. Quét barcode.
 		- Mô tả: 

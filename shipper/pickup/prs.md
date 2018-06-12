@@ -28,14 +28,25 @@ Use to get shipper's current PRS.
             "sender_name": "A",
             "sender_phone": "0123456789",
             "sender_address": "104 NCT",
-            "sender_location_id": 4,
-            "total": 1,
-            "sender_address_detail": "104 NCT, Ba Đình, Hà Nội",
-            "total_to_be_picked_up": 1
+            "sender_location_id": 1,
+            "sender_longitude": 0,
+            "sender_latitude": 0,
+            "total": 12,
+            "sender_address_detail": "104 NCT, Quận 1, Hồ Chí Minh",
+            "orders": [
+                {
+                    "id": 10,
+                    "order_code": "O1528106801",
+                    "cash": 40000,
+                    "status": "To Be Picked Up",
+                    "session": "morning"
+                }
+            ],
+            "total_picked_up": 0
         }
     ],
     "paging": [],
-    "message": "Found order(s)"
+    "message": "Found PRS(s)"
 }
 ```
 

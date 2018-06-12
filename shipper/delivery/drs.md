@@ -33,11 +33,20 @@ Use to get shipper's current DRS.
             "receiver_latitude": 0,
             "total": 1,
             "receiver_address_detail": "104 NCT, Quận 1, Hồ Chí Minh",
-            "total_ready_to_deliver": 1
+            "orders": [
+                {
+                    "id": 7,
+                    "order_code": "O1528100633",
+                    "cash": 6000,
+                    "status": "Delivered",
+                    "session": "morning"
+                }
+            ],
+            "total_delivered": 1
         }
     ],
     "paging": [],
-    "message": "Found order(s)"
+    "message": "Found DRS(s)"
 }
 ```
 

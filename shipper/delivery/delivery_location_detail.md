@@ -2,7 +2,7 @@
 
 Use to get shipper's delivery location detail.
 
-**URL** : `/orders/delivery?receiver_address={address number/street}&receiver_location_id={id}`
+**URL** : `?receiver_address={address number/street}&receiver_location_id={id}&receiver_phone={phone number}`
 
 **Method** : `GET`
 
@@ -32,13 +32,17 @@ Use to get shipper's delivery location detail.
         "total": 1,
         "orders": [
             {
-                "id": 2,
+                "id": 7,
+                "order_code": "O1528100633",
                 "cash": 6000,
-                "status": "Ready To Deliver"
+                "status": "Delivered",
+                "session": "morning"
             }
         ]
     },
-    "paging": [],
+    "paging": {
+        "total": 1
+    },
     "message": "Found order(s)"
 }
 ```
