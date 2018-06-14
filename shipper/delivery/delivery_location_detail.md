@@ -34,8 +34,10 @@ Use to get shipper's delivery location detail.
             {
                 "id": 7,
                 "order_code": "O1528100633",
+                "order_status_id": 17,
+                "pickup_photos": [],
                 "cash": 6000,
-                "status": "Delivered",
+                "status": "Cancel",
                 "session": "morning"
             }
         ]

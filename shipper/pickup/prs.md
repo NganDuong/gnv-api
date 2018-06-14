@@ -35,8 +35,20 @@ Use to get shipper's current PRS.
             "sender_address_detail": "104 NCT, Quận 1, Hồ Chí Minh",
             "orders": [
                 {
-                    "id": 10,
-                    "order_code": "O1528106801",
+                    "id": 17,
+                    "order_code": "O1528106810",
+                    "order_status_id": 3,
+                    "pickup_photos": [
+                        {
+                            "id": 209,
+                            "target_id": 17,
+                            "target_type": "Orders",
+                            "field": "Pickup",
+                            "path": "/uploads/files/orders/pickup/1.png",
+                            "created": "2018-06-14T10:12:38+07:00",
+                            "modified": "2018-06-14T10:12:38+07:00"
+                        }
+                    ],
                     "cash": 40000,
                     "status": "To Be Picked Up",
                     "session": "morning"
@@ -45,7 +57,9 @@ Use to get shipper's current PRS.
             "total_picked_up": 0
         }
     ],
-    "paging": [],
+    "paging": {
+        "total": 2
+    },
     "message": "Found PRS(s)"
 }
 ```

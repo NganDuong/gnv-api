@@ -31,8 +31,20 @@ Use to get shipper's pickup location detail.
         "sender_latitude": 0,
         "orders": [
             {
-                "id": 10,
-                "order_code": "O1528106801",
+                "id": 17,
+                "order_code": "O1528106810",
+                "order_status_id": 3,
+                "pickup_photos": [
+                    {
+                        "id": 209,
+                        "target_id": 17,
+                        "target_type": "Orders",
+                        "field": "Pickup",
+                        "path": "/uploads/files/orders/pickup/1.png",
+                        "created": "2018-06-14T10:12:38+07:00",
+                        "modified": "2018-06-14T10:12:38+07:00"
+                    }
+                ],
                 "cash": 40000,
                 "status": "To Be Picked Up",
                 "session": "morning"
