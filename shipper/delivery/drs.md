@@ -25,6 +25,7 @@ Use to get shipper's current DRS.
     "success": true,
     "data": [
         {
+            "owner_id": 5,
             "receiver_name": "B",
             "receiver_phone": "0123456789",
             "receiver_address": "104 NCT",
@@ -37,14 +38,16 @@ Use to get shipper's current DRS.
                 {
                     "id": 7,
                     "order_code": "O1528100633",
-                    "order_status_id": 17,
+                    "order_status_id": 9,
                     "pickup_photos": [],
                     "cash": 6000,
-                    "status": "Cancel",
-                    "session": "morning"
+                    "status": "Delivered",
+                    "session": "afternoon"
                 }
             ],
-            "total_delivered": 1
+            "total_delivered": 1,
+            "group_status_id": 9,
+            "group_status": "Delivered"
         }
     ],
     "paging": [],
