@@ -101,6 +101,10 @@
 		- Mô tả:
 		- API: /orders/pickup/failed/{id}
 		- [Detail](/shipper/pickup/failed_pickup.md)
+	14. Chọn nguyên nhân thất bại.
+		- Mô tả:
+		- API: /configs/orders/notes/
+		- [Detail](/config/order/order_note_reason_get.md)
 5. Danh sách cần giao.
 	1. Danh sách cần giao.
 		- Mô tả:
@@ -184,6 +188,10 @@
 			- Upload hình ảnh giao hàng/ chữ ký xác nhận.
 		- API: /orders/pickup/upload/{id}
 		- [Detail](/shipper/pickup/upload_photo.md)
+	13. Chọn nguyên nhân thất bại.
+		- Mô tả:
+		- API: /configs/orders/notes/
+		- [Detail](/config/order/order_note_reason_get.md)
 6. Xem yêu cầu.
 	1. Xem các yêu cầu.
 		- API: /orders/requests
