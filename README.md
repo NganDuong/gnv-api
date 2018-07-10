@@ -199,3 +199,9 @@
 	2. Xem chi tiết yêu cầu.
 		- API: /orders/requests/{id}
 		- [Detail](/order/request_get.md).
+	3. Cập nhật trạng thái đã xem.
+		- API: /orders/requests/{id}
+		- [Detail](/order/request_read.md).
+	4. Xem chi tiết yêu cầu theo trạng thái.
+		- API:/orders/requests/status?read_status={0 | 1}
+		- [Detail](/order/request_status_get.md).
