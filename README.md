@@ -29,7 +29,7 @@
 				- Số đơn hàng đã lấy: picked
 				- Số đơn hàng chưa lấy: picking
 				- Số đơn hàng lấy thất bại: failed
-				- Tổng số đơn hàng: total
+				- Tiền thu shop: total_cash
 		- API: /orders/pickup/statistics
 		- [Detail](/shipper/pickup/statistic.md)
 	3. Xem đơn hàng đã lấy:
@@ -117,7 +117,7 @@
 				- Số đơn hàng đã lấy: picked
 				- Số đơn hàng chưa lấy: picking
 				- Số đơn hàng lấy thất bại: failed
-				- Tổng số đơn hàng: total
+				- Tiền thu shop: total_cash
 		- API: /orders/delivery/statistics
 		- [Detail](/shipper/delivery/statistics.md)
 	3. Xem đơn hàng đã giao:
