@@ -31,7 +31,7 @@ Use to log an existed user in.
 ```
 
 ```bash
-curl -X POST http://api.gnv.findsoft.vn/users/login -i -H "Content-Type: application/json" -d '{"username":"shipper","password":"123456"}'
+curl -X POST http://giaonhanviet.local:8080/users/login -i -H "Content-Type: application/json" -d '{"username":"admin","password":"123456"}'
 ```
 
 ## Success Response

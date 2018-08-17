@@ -1,207 +1,245 @@
-# SHIPPER APIs.
+# SHOP OWNER APIs.
 
-1. Đăng nhập.
-	- API: /users/login
-	- [Detail](user/login.md)
-	- Example notify: [Detail](order/notification.md).
+1. Đăng ký.
+	1. Kiểm tra.
+		- API: /users/register/check
+		- [Detail](/user/register_check.md).
+	1. Đăng ký.
+		- API: /users/register
+		- [Detail](/user/register.md).		
 2. Đăng ký push notification token.
 	- API: /users/notifications/register
 	- [Detail](/user/register_push_token.md).
-3. Cập nhật vị trí.
-	- API: /users/profile/locations
-	- [Detail](/shipper/profile/update_location.md).
-4. Danh sách cần lấy.
-	1. Danh sách cần lấy: 
-		- Mô tả:
-			- Lấy ra các đơn hàng được group theo địa chỉ lấy hàng trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Tên liên hệ lấy hàng: sender_name
-				- Số điện thoại liên hệ lấy hàng: sender_phone
-				- Địa chỉ lấy hàng: sender_address, sender_location_id, sender_longitude, sender_latitude, sender_address_detail
-				- Tổng số đơn hàng ở địa chỉ này: total
-				- Số đơn hàng đã lấy tại địa chỉ này: total_picked_up
-		- API: /orders/pickup/
-		- [Detail](/shipper/pickup/prs.md)
-	2. Thống kê:
-		- Mô tả:
-			- Thống kê dựa trên các đơn hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Số đơn hàng đã lấy: picked
-				- Số đơn hàng chưa lấy: picking
-				- Số đơn hàng lấy thất bại: failed
-				- Tiền thu shop: total_cash
-		- API: /orders/pickup/statistics
-		- [Detail](/shipper/pickup/statistic.md)
-	3. Xem đơn hàng đã lấy:
-		- Mô tả:
-			- Thống kê dựa trên các đơn hàng đã lấy được group theo địa chỉ lấy hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Tên liên hệ lấy hàng: sender_name
-				- Số điện thoại liên hệ lấy hàng: sender_phone
-				- Địa chỉ lấy hàng: sender_address, sender_location_id, sender_longitude, sender_latitude, sender_address_detail
-				- Tổng số đơn hàng: total
-		- API: /orders/pickup/statistics/picked
-		- [Detail](/shipper/pickup/picked_orders.md)
-	4. Xem đơn hàng chưa lấy:
-		- Mô tả:
-			- Thống kê dựa trên các đơn hàng chưa lấy được group theo địa chỉ lấy hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Tên liên hệ lấy hàng: sender_name
-				- Số điện thoại liên hệ lấy hàng: sender_phone
-				- Địa chỉ lấy hàng: sender_address, sender_location_id, sender_longitude, sender_latitude, sender_address_detail
-				- Tổng số đơn hàng: total
-		- API: /orders/pickup/statistics/picking
-		- [Detail](/shipper/pickup/picking_orders.md)
-	5. Xem đơn hàng lấy thất bại:
-		- Mô tả:
-			- Thống kê dựa trên các đơn hàng lấy thất bại được group theo địa chỉ lấy hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Tên liên hệ lấy hàng: sender_name
-				- Số điện thoại liên hệ lấy hàng: sender_phone
-				- Địa chỉ lấy hàng: sender_address, sender_location_id, sender_longitude, sender_latitude, sender_address_detail
-				- Tổng số đơn hàng: total
-		- API: /orders/pickup/statistics/failed
-		- [Detail](/shipper/pickup/failed_orders.md)
-	6. Xem các đơn hàng cùng địa chỉ lấy hàng:
-		- Mô tả: 
-			- Thống kê các đơn hàng thuộc địa chỉ lấy hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Tên liên hệ lấy hàng: sender_name
-				- Số điện thoại liên hệ lấy hàng: sender_phone
-				- Địa chỉ lấy hàng: sender_address, sender_location_id, sender_longitude, sender_latitude, sender_address_detail
-				- Tổng số đơn hàng: total
-				- Danh sách các đơn hàng.
-		- API: /orders/pickup?sender_address={address number/street}&sender_location_id={id}&sender_phone={phone number}
-		- [Detail](/shipper/pickup/pickup_location_detail.md)
-	7. Xem thông tin đơn hàng:
-		- Mô tả:
-			- Hiển thị thông tin chung của đơn hàng.
-		- API: /orders/{id}
-		- [Detail](/order/get.md)
-	8. Xem lịch sử đơn hàng:
-		- Mô tả:
-			- Hiển thị thông tin lịch sử đơn hàng.
-		- API: /orders/notes?order_id={id}
-		- [Detail](/order/get_notes.md)
-	9. Xác nhận đã thanh toán phí:
-		- Mô tả:
-			- Xác nhận đã thu tiền phí.
-		- API: /orders/pickup/collectFees/{id}
-		- [Detail](/shipper/pickup/collect_fee.md)
-	10. Thêm (Upload hình ảnh).
-		- Mô tả:
-			- Upload hình ảnh lấy hàng/ chữ ký xác nhận của người gửi.
-		- API: /orders/pickup/upload/{id}
-		- [Detail](/shipper/pickup/upload_photo.md)
-	11. Xác nhận lấy hàng thành công.
-		- Mô tả:
-		- API: /orders/pickup/confirm/{id}
-		- [Detail](/shipper/pickup/confirm_pickup.md)
-	13. Xác nhận lấy hàng thất bại.
-		- Mô tả:
-		- API: /orders/pickup/failed/{id}
-		- [Detail](/shipper/pickup/failed_pickup.md)
-	14. Chọn nguyên nhân thất bại.
-		- Mô tả:
-		- API: /configs/orders/notes/
-		- [Detail](/config/order/order_note_reason_get.md)
-5. Danh sách cần giao.
-	1. Danh sách cần giao.
-		- Mô tả:
-		- API: /orders/delivery
-		- [Detail](/shipper/delivery/drs.md)
-	2. Thống kê:
-		- Mô tả:
-			- Thống kê dựa trên các đơn hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Số đơn hàng đã lấy: picked
-				- Số đơn hàng chưa lấy: picking
-				- Số đơn hàng lấy thất bại: failed
-				- Tiền thu shop: total_cash
-		- API: /orders/delivery/statistics
-		- [Detail](/shipper/delivery/statistics.md)
-	3. Xem đơn hàng đã giao:
-		- Mô tả:
-			- Thống kê dựa trên các đơn hàng đã giao được group theo địa chỉ giao hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Tên liên hệ giao hàng: receiver_name
-				- Số điện thoại liên hệ giao hàng: receiver_phone
-				- Địa chỉ giao hàng: receiver_address
-				- Tổng số đơn hàng: total
-		- API: /orders/delivery/statistics/delivered
-		- [Detail](/shipper/delivery/delivered_orders.md)
-	4. Xem đơn hàng chưa giao:
-		- Mô tả:
-			- Thống kê dựa trên các đơn hàng chưa giao được group theo địa chỉ giao hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Tên liên hệ giao hàng: receiver_name
-				- Số điện thoại liên hệ giao hàng: receiver_phone
-				- Địa chỉ giao hàng: receiver_address
-				- Tổng số đơn hàng: total
-		- API: /orders/delivery/statistics/delivering
-		- [Detail](/shipper/delivery/delivering_orders.md)
-	5. Xem đơn hàng giao thất bại:
-		- Mô tả:
-			- Thống kê dựa trên các đơn hàng giao thất bại được group theo địa chỉ giao hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Tên liên hệ giao hàng: receiver_name
-				- Số điện thoại liên hệ giao hàng: receiver_phone
-				- Địa chỉ giao hàng: receiver_address
-				- Tổng số đơn hàng: total
-		- API: /orders/delivery/statistics/failed
-		- [Detail](/shipper/delivery/failed_orders.md)
-	6. Xem các đơn hàng cùng địa chỉ giao hàng:
-		- Mô tả: 
-			- Thống kê các đơn hàng thuộc địa chỉ giao hàng có trong ca hiện tại.
-			- Nội dung hiển thị:
-				- Tên liên hệ giao hàng: receiver_name
-				- Số điện thoại liên hệ giao hàng: receiver_phone
-				- Địa chỉ giao hàng: receiver_address
-				- Tổng số đơn hàng: total
-				- Danh sách các đơn hàng.
-		- API: /orders/delivery?receiver_address={address number/street}&receiver_location_id={id}&receiver_phone={phone number}
-		- [Detail](/shipper/delivery/delivery_location_detail.md)
-	7. Quét barcode.
-		- Mô tả: 
-		- API: /orders/delivery/check
-		- [Detail](/shipper/delivery/check.md)
-	8. Xem thông tin đơn hàng:
-		- Mô tả:
-			- Hiển thị thông tin chung của đơn hàng.
-		- API: /orders/{id}
-		- [Detail](/order/get.md)
-	9. Xem lịch sử đơn hàng:
-		- Mô tả:
-			- Hiển thị thông tin lịch sử đơn hàng.
-		- API: /orders/notes?order_id={id}
-		- [Detail](/order/get_notes.md)
-	10. Xác nhận lấy giao thành công.
-		- Mô tả:
-		- API: /orders/delivery/confirm/{id}
-		- [Detail](/shipper/delivery/confirm_delivery.md)
-	11. Xác nhận lấy giao thất bại.
-		- Mô tả:
-		- API: /orders/delivery/failed/{id}
-		- [Detail](/shipper/delivery/failed_delivery.md)
-	12. Thêm (Upload hình ảnh).
-		- Mô tả:
-			- Upload hình ảnh giao hàng/ chữ ký xác nhận.
-		- API: /orders/pickup/upload/{id}
-		- [Detail](/shipper/pickup/upload_photo.md)
-	13. Chọn nguyên nhân thất bại.
-		- Mô tả:
-		- API: /configs/orders/notes/
-		- [Detail](/config/order/order_note_reason_get.md)
-6. Xem yêu cầu.
-	1. Xem các yêu cầu.
-		- API: /orders/requests
-		- [Detail](/order/request_get.md).
-	2. Xem chi tiết yêu cầu.
-		- API: /orders/requests/{id}
-		- [Detail](/order/request_get.md).
-	3. Cập nhật trạng thái đã xem.
-		- API: /orders/requests/{id}
-		- [Detail](/order/request_read.md).
-	4. Xem chi tiết yêu cầu theo trạng thái.
-		- API:/orders/requests/status?read_status={0 | 1}
-		- [Detail](/order/request_status_get.md).
+	- Example notify: [Detail](/order/notification.md).
+3. Đăng nhập.
+	- API: /users/login
+	- [Detail](/user/login.md).
+4. Cài đặt chung.
+	1. Thông tin tài khoản.
+		1. Xem.
+			- API: /users/{id}
+			- [Detail](/user/profile_info_get.md).
+		2. Sửa.
+			- API: /users/{id}
+			- [Detail](/user/profile_info_update.md).
+			- Fields:
+				- Họ tên.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Số điện thoại.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Email.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+	2. Tài khoản ngân hàng.
+		1. Xem.
+			1. Xem tất cả.
+				- API: /users/profile/banks
+				- [Detail](/user/profile_bank_get.md).
+			2. Xem chi tiết.
+				- API: /users/profile/banks/{id}
+				- [Detail](/user/profile_bank_get.md).
+		2. Thêm.
+			- API: /users/profile/banks
+			- [Detail](/user/profile_bank_create.md).
+		3. Sửa.
+			- API: /users/profile/banks/{id}
+			- [Detail](/user/profile_bank_update.md).
+			- Fields:
+				- Chủ tài khoản.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Số tài khoản.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Tên ngân hàng.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Chi nhánh.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Tài khoản chính.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+		4. Xóa.
+			- API: /users/profile/banks/{id}
+			- [Detail](/user/profile_bank_delete.md).
+	3. Chi nhánh cửa hàng.
+		1. Xem.
+			1. Xem tất cả.
+				- API: /users/profile/stores
+				- [Detail](/user/profile_store_get.md).
+			2. Xem chi tiết.
+				- API: /users/profile/stores/{id}
+				- [Detail](/user/profile_store_get.md).
+		2. Thêm.
+			- API: /users/profile/stores
+			- [Detail](/user/profile_store_create.md).
+			- Fields:
+				- Tên người liên hệ.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Số điện thoại.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Địa chỉ chi tiết.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Quận (huyện).
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Tỉnh (thành phố).
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+		3. Sửa.
+			- API: /users/profile/stores/{id}
+			- [Detail](/user/profile_store_update.md).
+			- Fields:
+				- Tên người liên hệ.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Số điện thoại.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Địa chỉ chi tiết.
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Quận (huyện).
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+				- Tỉnh (thành phố).
+					+ Field:
+					+ Value's type:
+					+ Example URL:
+		4. Xóa.
+			- API: /users/profile/stores/{id}
+			- [Detail](/user/profile_store_delete.md).
+	4. Lịch đối soát.
+		1. Lấy thông tin để tạo (lấy lựa chọn).
+			- API: /configs/schedules/crossCheck
+			- [Detail](/config/schedule/cross_check_get_schedule.md).
+		2. Xem.
+			- API: /users/profile/schedules/crossCheck/{id}
+			- [Detail](/user/profile_cross_check_schedule_get.md).
+		3. Tạo/Cập nhật.
+			- API: /users/profile/schedules/crossCheck/{id}
+			- [Detail](/user/profile_cross_check_schedule_update.md).
+5. Quản lý đơn hàng.
+	1. Xem các đơn hàng.
+		- API: /orders
+		- [Detail](/order/get.md).
+	2. Xem chi tiết đơn hàng.
+		1. Xem thông tin đơn hàng.
+			- API: /orders/{id}
+			- [Detail](/order/get.md).
+		2. Xem lịch sử đơn hàng.
+			- API: /orders/notes?order_id={id}
+			- [Detail](/order/get_notes.md).
+	3. Gửi yêu cầu cho 1 đơn hàng.
+		1. Chọn loại yêu cầu.
+			- API: /configs/orders/requests/
+			- [Detail](/config/order/request_type_get.md).
+		2. Gửi yêu cầu.
+			- API: /orders/requests
+			- [Detail](/order/request_create.md).
+	4. Tìm kiếm đơn hàng.
+		- API: /orders
+		- [Detail](/order/search.md).
+		- Tìm kiếm theo:
+			1. Mã đơn hàng:
+				> + Field to search: ```order_code```
+				> + Value's type: string
+				> + Example URL: /orders?order_code=O1527428478
+			2. Số điện thoại người gửi / nhận:
+				> + Field to search: ```sender_phone``` / ```receiver_phone```
+				> + Value's type: string / string
+				> + Example URL: /orders?sender_phone=0123456789
+			3. Tên người gửi / nhận:
+				> + Field to search: ```sender_name``` / ```receiver_name```
+				> + Value's type: string / string
+				> + Example URL: /orders?sender_name=ngan
+			4. Địa chỉ người gửi / nhận:
+				> + Field to search: ```sender_address``` / ```receiver_address``` / ```sender_location_id``` / ```receiver_location_id```
+				> + Value's type: string / string / integer / integer
+				> + Example URL: /orders?sender_address[like]=104
+			5. Trạng thái đơn hàng:
+				> + Field to search: ```order_status_id```
+				> + Value's type: integer : range = [1-16]
+				> + Example URL: /orders?order_status_id=1
+			6. Ngày tạo đơn hàng:
+				- Từ:
+					> + Field to search: ```created```
+					> + Value's type: string / datetime
+					> + Example URL: /orders?created[ge]=27/05/2018
+				- Đến:
+					> + Field to search: ```created```
+					> + Value's type: string / datetime
+					> + Example URL: /orders?created[le]=27/05/2018T23:59:59
+			7. Người thanh toán phí:
+				> + Field to search: ```fee_payer```
+				> + Value's type: integer : range = [0 (shop owner / sender), 1 (receiver)] 
+				> + Example URL: /orders?fee_payer=0
+	5. Tạo đơn hàng.
+		1. Tạo.
+			- API: /orders
+			- [Detail](/order/create.md).
+			- Fields:
+				1. Thông tin giao nhận.
+					1. Thông tin người gửi.
+						1. Chọn từ danh sách chi nhánh cửa hàng.
+						2. Nhập mới.
+							- Tên.
+							- Số điện thoại.
+							- Địa chỉ chi tiết.
+							- Tỉnh (thành phố).
+							- Quận (huyện).
+					2. Thông tin người nhận.
+						- Tên.
+						- Số điện thoại.
+						- Địa chỉ chi tiết.
+						- Tỉnh (thành phố).
+						- Quận (huyện).
+					3. Ngày giờ muốn lấy hàng.
+					4. Ngày giờ muốn nhận hàng.
+				2. Chi tiết đơn hàng (gói hàng).
+					- Mã đơn của shop.
+					- Loại hàng.
+					- Kích thước.
+					- Cân nặng.
+					- Gói cước (dịch vụ).
+					- Ghi chú đơn hàng.
+				3. Thông tin thanh toán.
+					- Khai giá hàng hóa.
+					- Thu hộ.
+					- Phí vận chuyển (chọn người trả).
+		4. Tính phí, tiền.
+			- API: /orders/fees/
+			- Example: /orders/fees?&sender_location_id=1&receiver_location_id=1&weight=1&length=1&width=1&height=1&service_id=1&cod=0
+			- [Detail](/order/calculate_fee.md).
+6. Quản lý đối soát.
+	1. Đối soát sắp tới.
+		- Xem thông tin.
+			- API: /orders/moneys
+			- [Detail](/order/money.md).
+	2. Lịch sử đối soát.
+		- Xem thông tin.
+			- API: /orders/transferedMoneys
+			- [Detail](/order/transfered_money.md).
