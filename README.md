@@ -160,6 +160,21 @@
 		2. Gửi yêu cầu.
 			- API: /orders/requests
 			- [Detail](/order/request_create.md).
+		3. Xem yêu cầu.
+			- Mô tả:
+			- Lấy danh sách yêu cầu đã gửi. Kết quả trả về được gom nhóm theo mã đơn hàng, mỗi nhóm sẽ gồm danh sách các yêu cầu đối với đơn hàng này.
+			- Params:
+				- Mã đơn hàng: `order_code`
+				- Tiêu đề yêu cầu: `order_request_type` -> `name`
+				- Nội dung yêu cầu: `description`
+				- Ngày tạo yêu cầu: `created`
+				- Trạng thái: `status`
+				- Người xử lý: `solver` -> `username`
+				- Thời gian đã xử lý: `solved`
+			- API lấy tất cả yêu cầu: /orders/requests
+			- API lấy yêu cầu của 1 đơn hàng: /orders/requests?order_id={id}
+			- API lấy 1 yêu cầu của 1 đơn hàng: /orders/requests?order_id={order id}&id={request id}
+			- [Detail](/order/request_get_new.md).
 	4. Tìm kiếm đơn hàng.
 		- API: /orders
 		- [Detail](/order/search.md).
@@ -243,3 +258,20 @@
 		- Xem thông tin.
 			- API: /orders/transferedMoneys
 			- [Detail](/order/transfered_money.md).
+7. Thông báo.
+	- Xem danh sách thông báo.
+		- Mô tả: 
+			- Hiển thị danh sách thông báo.
+			- Nội dung hiển thị:
+				- Mã đơn hàng: `order_notification` -> `order_code`.
+				- Thời gian: `created`.
+				- Tiêu đề: `order_notification` -> `header`.
+				- Nội dung: `order_notification` -> `content`.
+				- Trạng thái: `status`.
+		- API: /users/notifications
+		- [Detail](/user/notification_get.md).
+	- Đánh dấu đã xem thông báo.
+		- Mô tả: 
+			- Đánh dấu đã xem 01 thông báo.
+		- API: /users/notifications/read/{id}
+		- [Detail](/user/notification_read.md).
