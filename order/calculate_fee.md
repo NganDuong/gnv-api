@@ -22,12 +22,14 @@ Use to calculate order's fee.
     "cod": [cod amount],
     "coupon_code": "[coupon code]",
     "value": [parcel's value],
+    "source_location_id": [source_location_id],
+    "dest_location_id": [dest_location_id],
 }
 ```
 
 **URL example**
 
-/orders/fees?weight=10000&length=100&width=100&height=100&service_id=100&cod=1&service_id=1&value=100000
+/orders/fees?weight=3500&length=20&width=&source_location_id=1&dest_location_id=7&service_id=2&cod=350000&value=350000
 
 ## Success Response
 
@@ -39,10 +41,18 @@ Use to calculate order's fee.
 {
     "success": true,
     "data": {
-        "service_fee": 61000,
-        "cod_fee": 10000,
-        "insurance_fee": 50000,
-        "total": 121000
+        "0": {
+            "name": "Service",
+            "amount": 32000
+        },
+        "1": {
+            "name": "COD",
+            "amount": 5000
+        },
+        "service_fee": 32000,
+        "cod_fee": 5000,
+        "insurance_fee": 0,
+        "total": 37000
     },
     "paging": [],
     "message": "Fees calculated"

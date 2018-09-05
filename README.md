@@ -245,6 +245,10 @@
 					- Khai giá hàng hóa.
 					- Thu hộ.
 					- Phí vận chuyển (chọn người trả).
+		2. Lấy danh sách gói dịch vụ.
+			- API: /configs/orders/deliveries/services?sender_location_id={id}&receiver_location_id={id}
+			- Example: /configs/orders/deliveries/services?sender_location_id=1&receiver_location_id=1
+			- [Detail](/config/service/get_specific.md).
 		4. Tính phí, tiền.
 			- API: /orders/fees/
 			- Example: /orders/fees?&sender_location_id=1&receiver_location_id=1&weight=1&length=1&width=1&height=1&service_id=1&cod=0
