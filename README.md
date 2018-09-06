@@ -5,6 +5,12 @@
 		- API: /users/register/check
 		- [Detail](/user/register_check.md).
 	1. Đăng ký.
+		- Mô tả:
+			- Nội dung hiển thị:
+				- Tên đăng nhập: `username`
+				- Số điện thoại: `phone`
+				- Email: `email`
+				- Mật khẩu: `password`
 		- API: /users/register
 		- [Detail](/user/register.md).		
 2. Đăng ký push notification token.
@@ -17,118 +23,131 @@
 4. Cài đặt chung.
 	1. Thông tin tài khoản.
 		1. Xem.
+			- Mô tả:
+				- Nội dung hiển thị:
+					- Họ tên: `username`
+					- Số điện thoại: `phone`
+					- Email: `email`
 			- API: /users/{id}
 			- [Detail](/user/profile_info_get.md).
 		2. Sửa.
+			- Mô tả:
+				- Nội dung hiển thị:
+					- Họ tên: `username`
+					- Số điện thoại: `phone`
+					- Email: `email`
 			- API: /users/{id}
 			- [Detail](/user/profile_info_update.md).
-			- Fields:
-				- Họ tên.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Số điện thoại.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Email.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
 	2. Tài khoản ngân hàng.
 		1. Xem.
 			1. Xem tất cả.
+				- Mô tả:
+					- Nội dung hiển thị:
+						- Chủ tài khoản: `account_holder`
+						- Số tài khoản: `bank_account_number`
+						- Tên ngân hàng: `bank_name`
+						- Chi nhánh: `branch_name`
+						- Tài khoản chính: `default_account`
 				- API: /users/profile/banks
 				- [Detail](/user/profile_bank_get.md).
 			2. Xem chi tiết.
+				- Mô tả:
+					- Nội dung hiển thị:
+						- Chủ tài khoản: `account_holder`
+						- Số tài khoản: `bank_account_number`
+						- Tên ngân hàng: `bank_name`
+						- Chi nhánh: `branch_name`
+						- Tài khoản chính: `default_account`
 				- API: /users/profile/banks/{id}
 				- [Detail](/user/profile_bank_get.md).
+			2. Xem ngân hàng được hỗ trợ.
+				- Mô tả:
+					- Nội dung hiển thị:
+						- Tên ngân hàng: `name`
+				- API: /configs/banks/{id}
+				- [Detail](/config/bank/get.md).
 		2. Thêm.
+			- Mô tả:
+				- Nội dung hiển thị:
+					- Chủ tài khoản: `account_holder`
+					- Số tài khoản: `bank_account_number`
+					- Ngân hàng: 
+						- Tên ngân hàng: `bank_name`
+						- Ngân hàng (chọn từ danh sách có sẵn): `support_bank_id`
+					- Chi nhánh: `branch_name`
+					- Tài khoản chính: `default_account`
 			- API: /users/profile/banks
 			- [Detail](/user/profile_bank_create.md).
 		3. Sửa.
+			- Mô tả:
+				- Nội dung hiển thị:
+					- Chủ tài khoản: `account_holder`
+					- Số tài khoản: `bank_account_number`
+					- Ngân hàng: 
+						- Tên ngân hàng: `bank_name`
+						- Ngân hàng (chọn từ danh sách có sẵn): `support_bank_id`
+					- Chi nhánh: `branch_name`
+					- Tài khoản chính: `default_account`
 			- API: /users/profile/banks/{id}
 			- [Detail](/user/profile_bank_update.md).
-			- Fields:
-				- Chủ tài khoản.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Số tài khoản.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Tên ngân hàng.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Chi nhánh.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Tài khoản chính.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
 		4. Xóa.
 			- API: /users/profile/banks/{id}
 			- [Detail](/user/profile_bank_delete.md).
 	3. Chi nhánh cửa hàng.
 		1. Xem.
 			1. Xem tất cả.
+				- Mô tả:
+					- Nội dung hiển thị:
+						- Tên cửa hàng: `name`
+						- Số điện thoại: `phone`
+						- Địa chỉ:
+							- Đường: `address`
+							- Quận: `location` -> `district` -> `name`
+							- Tỉnh/Thành phố: `location` -> `province` -> `name`
+						- Cửa hàng chính: `default_store`
 				- API: /users/profile/stores
 				- [Detail](/user/profile_store_get.md).
 			2. Xem chi tiết.
+				- Mô tả:
+					- Nội dung hiển thị:
+						- Tên cửa hàng: `name`
+						- Số điện thoại: `phone`
+						- Địa chỉ:
+							- Đường: `address`
+							- Quận: `location` -> `district` -> `name`
+							- Tỉnh/Thành phố: `location` -> `province` -> `name`
+						- Cửa hàng chính: `default_store`
 				- API: /users/profile/stores/{id}
 				- [Detail](/user/profile_store_get.md).
 		2. Thêm.
+			- Mô tả:
+				- Nội dung hiển thị:
+					- Tên người liên hệ: `name`
+					- Số điện thoại: `phone`
+					- Địa chỉ:
+						- Đường: `address`
+						- Khu vực: `location_id`
+						- Kinh độ: `longitude`
+						- Vĩ độ: `latitude`
+					- Cửa hàng chính: `default_store`
 			- API: /users/profile/stores
 			- [Detail](/user/profile_store_create.md).
-			- Fields:
-				- Tên người liên hệ.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Số điện thoại.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Địa chỉ chi tiết.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Quận (huyện).
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Tỉnh (thành phố).
-					+ Field:
-					+ Value's type:
-					+ Example URL:
+		2. Lấy danh sách địa chỉ lấy hàng.
+			- API: /configs/locations?support_type_id[in]=1,3
+			- [Detail](/config/location/get.md).
 		3. Sửa.
+			- Mô tả:
+				- Nội dung hiển thị:
+					- Tên người liên hệ: `name`
+					- Số điện thoại: `phone`
+					- Địa chỉ:
+						- Đường: `address`
+						- Khu vực: `location_id`
+						- Kinh độ: `longitude`
+						- Vĩ độ: `latitude`
+					- Cửa hàng chính: `default_store`
 			- API: /users/profile/stores/{id}
 			- [Detail](/user/profile_store_update.md).
-			- Fields:
-				- Tên người liên hệ.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Số điện thoại.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Địa chỉ chi tiết.
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Quận (huyện).
-					+ Field:
-					+ Value's type:
-					+ Example URL:
-				- Tỉnh (thành phố).
-					+ Field:
-					+ Value's type:
-					+ Example URL:
 		4. Xóa.
 			- API: /users/profile/stores/{id}
 			- [Detail](/user/profile_store_delete.md).
