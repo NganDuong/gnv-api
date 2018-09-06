@@ -194,6 +194,13 @@
 			- API lấy yêu cầu của 1 đơn hàng: /orders/requests?order_id={id}
 			- API lấy 1 yêu cầu của 1 đơn hàng: /orders/requests?order_id={order id}&id={request id}
 			- [Detail](/order/request_get_new.md).
+	4. Lấy danh sách trạng thái đơn hàng.
+		- Mô tả: 
+			- Hiển thị danh sách trạng thái đơn hàng.
+			- Nội dung hiển thị:
+				- Trạng thái: `name`.
+		- API: /configs/orders/status/{id}
+		- [Detail](/order/status_get.md).
 	4. Tìm kiếm đơn hàng.
 		- API: /orders
 		- [Detail](/order/search.md).
