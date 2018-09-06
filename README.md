@@ -167,9 +167,63 @@
 		- [Detail](/order/get.md).
 	2. Xem chi tiết đơn hàng.
 		1. Xem thông tin đơn hàng.
+			- Mô tả: 
+				- Nội dung hiển thị:
+					- Mã đơn hàng: `order_code`
+					- Tuyến đơn hàng: `route_text`
+					- Thời gian lấy thực tế:
+						- Ca: `expected_pickup_session`
+						- Ngày: `expected_pickup_date`
+					- Thời gian giao thực tế:
+						- Ca: `expected_delivery_session`
+						- Ngày: `expected_delivery_date`
+					- Thông tin người gửi:
+						- Người gửi: `sender_name`
+						- Số điện thoại: `sender_phone`
+						- Địa chỉ lấy hàng:
+							- Đường: `sender_address`
+							- Quận: `sender_address_district`
+							- Tỉnh/Thành phố: `sender_address_province`
+							- Kinh độ: `sender_longitude`
+							- Vĩ độ: `sender_latitude`
+						- Thời gian lấy: `pickup_session`
+						- Ngày lấy hàng: `pickup_date`
+					- Thông tin người nhận:
+						- Người nhận: `receiver_name`
+						- Số điện thoại: `receiver_phone`
+						- Địa chỉ giao hàng:
+							- Đường: `receiver_address`
+							- Quận: `sender_address_district`
+							- Tỉnh/Thành phố: `sender_address_province`
+							- Kinh độ: `receiver_longitude`
+							- Vĩ độ: `receiver_latitude`
+						- Thời gian giao: `delivery_session`
+						- Ngày giao hàng: `delivery_date`
+					- Thông tin đơn hàng:
+						- Mã đơn hàng (của shop/khách hàng): `customer_order_code`
+						- Kích thước:
+							- Dài: `size_lenght`
+							- Rộng: `size_width`
+							- Cao: `size_height`
+						- Gói cước: `service` -> `name`
+						- Ghi chú đơn hàng: `handle_instruction`
+						- Trạng thái: `order_status`
+						- Loại hàng: `type`
+						- Trọng lượng: `weight`
+					- Thông tin thanh toán:
+						- Khai giá hàng hóa: `value`
+						- Thu hộ(COD): `cod`
+						- Thanh toán phí: `fee_payer`
+						- Phí giao hàng: `delivery_fee`
+						- Tổng tiền thu: `cash`
 			- API: /orders/{id}
 			- [Detail](/order/get.md).
 		2. Xem lịch sử đơn hàng.
+			- Mô tả: 
+				- Nội dung hiển thị:
+					- Ngày: `created`
+					- Header: `field`
+					- Content: `description` & `note_date`
 			- API: /orders/notes?order_id={id}
 			- [Detail](/order/get_notes.md).
 	3. Gửi yêu cầu cho 1 đơn hàng.
@@ -181,15 +235,15 @@
 			- [Detail](/order/request_create.md).
 		3. Xem yêu cầu.
 			- Mô tả:
-			- Lấy danh sách yêu cầu đã gửi. Kết quả trả về được gom nhóm theo mã đơn hàng, mỗi nhóm sẽ gồm danh sách các yêu cầu đối với đơn hàng này.
-			- Params:
-				- Mã đơn hàng: `order_code`
-				- Tiêu đề yêu cầu: `order_request_type` -> `name`
-				- Nội dung yêu cầu: `description`
-				- Ngày tạo yêu cầu: `created`
-				- Trạng thái: `status`
-				- Người xử lý: `solver` -> `username`
-				- Thời gian đã xử lý: `solved`
+				- Lấy danh sách yêu cầu đã gửi. Kết quả trả về được gom nhóm theo mã đơn hàng, mỗi nhóm sẽ gồm danh sách các yêu cầu đối với đơn hàng này.
+				- Params:
+					- Mã đơn hàng: `order_code`
+					- Tiêu đề yêu cầu: `order_request_type` -> `name`
+					- Nội dung yêu cầu: `description`
+					- Ngày tạo yêu cầu: `created`
+					- Trạng thái: `status`
+					- Người xử lý: `solver` -> `username`
+					- Thời gian đã xử lý: `solved`
 			- API lấy tất cả yêu cầu: /orders/requests
 			- API lấy yêu cầu của 1 đơn hàng: /orders/requests?order_id={id}
 			- API lấy 1 yêu cầu của 1 đơn hàng: /orders/requests?order_id={order id}&id={request id}
