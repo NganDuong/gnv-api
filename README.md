@@ -310,10 +310,36 @@
 6. Quản lý đối soát.
 	1. Đối soát sắp tới.
 		- Xem thông tin.
+			- Xem thông tin.
+				- Mô tả: 
+					- Nội dung hiển thị:
+						- Trạng thái:
+							- Tiền đã thu hộ: `success_orders`
+							- Tiền đang luân chuyển: `delivering_orders`
+							- Không giao được hàng: `failed_orders`
+						- Tiền thu hộ: `cod`
+						- Phí giao hàng: `delivery_fee`
+						- Phí bảo hiểm: `insurance_fee`
+						- Phí chuyển khoản: `transfer_fee`
+						- Tiền đối soát: `return_money`
+						- Số ĐH: `total_order`
+						- Xem đơn hàng: `detail`
 			- API: /orders/moneys
 			- [Detail](/order/money.md).
 	2. Lịch sử đối soát.
 		- Xem thông tin.
+			- Mô tả: 
+				- Nội dung hiển thị:
+					- Mã hóa đơn: `bill_code`
+					- Tiền thu hộ: `cod`
+					- Phí giao hàng: `delivery_fee`
+					- Phí bảo hiểm: `insurance_fee`
+					- Phí chuyển khoản: `transfer_fee`
+					- Tiền đối soát: `amount`
+					- ĐH thành công: `success_order`
+					- ĐH trả về: `return_order`
+					- Thời gian: `confirm_date`
+					- Xem đơn hàng: `detail`
 			- API: /orders/transferedMoneys
 			- [Detail](/order/transfered_money.md).
 7. Thông báo.
