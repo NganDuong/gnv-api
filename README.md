@@ -245,6 +245,12 @@
 					- Khai giá hàng hóa.
 					- Thu hộ.
 					- Phí vận chuyển (chọn người trả).
+		2. Lấy danh sách địa chỉ lấy hàng.
+			- API: /configs/locations?support_type_id[in]=1,3
+			- [Detail](/config/location/get.md).
+		2. Lấy danh sách địa chỉ giao hàng.
+			- API: /configs/locations?support_type_id[in]=2,3
+			- [Detail](/config/location/get.md).
 		2. Lấy danh sách gói dịch vụ.
 			- API: /configs/orders/deliveries/services?sender_location_id={id}&receiver_location_id={id}
 			- Example: /configs/orders/deliveries/services?sender_location_id=1&receiver_location_id=1
