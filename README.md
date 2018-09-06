@@ -221,36 +221,58 @@
 					1. Thông tin người gửi.
 						1. Chọn từ danh sách chi nhánh cửa hàng.
 						2. Nhập mới.
-							- Tên.
-							- Số điện thoại.
-							- Địa chỉ chi tiết.
-							- Tỉnh (thành phố).
-							- Quận (huyện).
+							- Tên: `sender_name`
+							- Số điện thoại: `sender_phone`
+							- Địa chỉ: `sender_address`
+							- Khu Vực: `sender_location_id`
 					2. Thông tin người nhận.
-						- Tên.
-						- Số điện thoại.
-						- Địa chỉ chi tiết.
-						- Tỉnh (thành phố).
-						- Quận (huyện).
+						- Tên: `receiver_name`
+						- Số điện thoại: `receiver_phone`
+						- Địa chỉ: `receiver_address`
+						- Khu Vực: `receiver_location_id`
 					3. Ngày giờ muốn lấy hàng.
+						- Ngày Lấy Hàng: `expected_pickup_date`
+						- Ca Lấy Hàng: `expected_pickup_session`
 					4. Ngày giờ muốn nhận hàng.
+						- Ngày Giao Hàng: `expected_delivery_date`
+						- Ca Giao Hàng: `expected_delivery_session`
 				2. Chi tiết đơn hàng (gói hàng).
-					- Mã đơn của shop.
-					- Loại hàng.
-					- Kích thước.
-					- Cân nặng.
-					- Gói cước (dịch vụ).
-					- Ghi chú đơn hàng.
+					- Mã đơn của shop: `customer_order_code`
+					- Loại hàng: `type`
+					- Kích thước:
+						- Dài: `size_lenght`
+						- Rộng: `size_width`
+						- Cao: `size_height`
+					- Cân nặng: `weight`
+					- Gói cước (dịch vụ): `service_id`
+					- Ghi chú đơn hàng: `handle_instruction`
 				3. Thông tin thanh toán.
-					- Khai giá hàng hóa.
-					- Thu hộ.
-					- Phí vận chuyển (chọn người trả).
+					- Khai giá hàng hóa: `value`
+					- Thu hộ: `cod`
+					- Phí vận chuyển (chọn người trả): `fee_payer`
+					- Mã Khuyến Mãi: `coupon_code`
 		2. Lấy danh sách địa chỉ lấy hàng.
 			- API: /configs/locations?support_type_id[in]=1,3
 			- [Detail](/config/location/get.md).
 		2. Lấy danh sách địa chỉ giao hàng.
 			- API: /configs/locations?support_type_id[in]=2,3
 			- [Detail](/config/location/get.md).
+		2. Lấy thông tin giới hạn kích thước.
+			1. Chiều dài.
+				- API: /configs/variables?name=PARCEL_LENGTH_LIMIT
+				- [Detail](/config/variable/get.md).
+			1. Chiều rộng.
+				- API: /configs/variables?name=PARCEL_WIDTH_LIMIT
+				- [Detail](/config/variable/get.md).
+			1. Chiều cao.
+				- API: /configs/variables?name=PARCEL_HEIGHT_LIMIT
+				- [Detail](/config/variable/get.md).
+		2. Lấy thông tin giới hạn cân nặng.
+			- API: /configs/variables?name=PARCEL_WEIGHT_LIMIT
+			- [Detail](/config/variable/get.md).
+		2. Kiểm tra coupon.
+			- API: /configs/orders/coupons/check?code={coupon code}&user_id={current user id}
+			- [Detail](/config/coupon/check.md).
 		2. Lấy danh sách gói dịch vụ.
 			- API: /configs/orders/deliveries/services?sender_location_id={id}&receiver_location_id={id}
 			- Example: /configs/orders/deliveries/services?sender_location_id=1&receiver_location_id=1
