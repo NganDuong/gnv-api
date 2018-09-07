@@ -38,6 +38,11 @@
 					- Email: `email`
 			- API: /users/{id}
 			- [Detail](/user/profile_info_update.md).
+		3. Upload avatar.
+			- Mô tả:
+				- Upload avatar
+			- API: /users/profile/avatar
+			- [Detail](/user/profile_info_avatar.md).
 	2. Tài khoản ngân hàng.
 		1. Xem.
 			1. Xem tất cả.
