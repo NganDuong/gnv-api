@@ -8,7 +8,7 @@
 | 4					| Failed To Pickup		| Đơn hàng lấy thất bại			| Lấy thất bại			|
 | 5					| Picked Up				| Đơn hàng đã lấy				| Đã Lấy 				|
 | 6					| Scanned/Checked 		| 								| Đang ở kho			|
-| 7					| Ready To Delivered 	| 				 				| Chuẩn bị Giao 		|
+| 7					| Ready To Delivered 	| Đơn hàng chưa giao			| Chuẩn bị Giao 		|
 | 8					| Being Delivered 		| Đơn hàng chưa giao 			| Đang giao 			|
 | 9 				| Delivered 			| Đơn hàng đã giao 				| Đã giao 				|
 | 10				| Failed To Delivered   | Đơn hàng giao thất bại 		| Giao thất bại 		|
