@@ -76,7 +76,8 @@ Use to get order's money infomation.
         }
     ],
     "paging": {
-        "total": 2
+        "total": 2,
+        "total_page": 1
     },
     "message": "Founds"
 }
