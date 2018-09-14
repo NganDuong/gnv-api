@@ -418,3 +418,20 @@
 			- Đánh dấu đã xem 01 thông báo.
 		- API: /users/notifications/read/{id}
 		- [Detail](/user/notification_read.md).
+8. Locations.
+	- Xem danh sách provinces.
+		- Mô tả: 
+			- Hiển thị danh sách provinces.
+			- Nội dung hiển thị:
+				- Tên tỉnh/thành phố: `name`
+				- Tên gợi nhớ/viết tắt: `mining_text`
+		- API: /configs/locations/provinces
+		- [Detail](/config/location/province/get.md).
+	- Xem danh sách districs.
+		- Mô tả: 
+			- Hiển thị danh sách districs.
+			- Nội dung hiển thị:
+				- Tên quận: `name`
+				- Tên gợi nhớ/viết tắt: `mining_text`
+		- API: /configs/locations/districts
+		- [Detail](/config/location/district/get.md).
