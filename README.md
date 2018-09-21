@@ -38,6 +38,14 @@
 					- Email: `email`
 			- API: /users/{id}
 			- [Detail](/user/profile_info_update.md).
+		2. Thay đổi mật khẩu.
+			- Mô tả:
+				- Nội dung hiển thị:
+					- Nhập mật khẩu hiện tại: `old_password`
+					- Nhập mật khẩu mới: `new_password`
+					- Xác nhận mật khẩu mới: `confirm_password`
+			- API: /users/updatePassword
+			- [Detail](/user/profile_password_update.md).
 		3. Upload avatar.
 			- Mô tả:
 				- Upload avatar

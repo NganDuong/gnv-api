@@ -52,7 +52,10 @@ Use to get order's money infomation.
             "detail": "/orders?order_status_id[in]=9,10,11,12"
         }
     },
-    "paging": [],
+    "paging": {
+        "total": 3,
+        "total_page": 1
+    },
     "message": "Moneys calculated"
 }
 ```
