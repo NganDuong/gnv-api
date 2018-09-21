@@ -46,6 +46,20 @@
 					- Xác nhận mật khẩu mới: `confirm_password`
 			- API: /users/updatePassword
 			- [Detail](/user/profile_password_update.md).
+		2. Gửi yêu cầu quên mật khẩu.
+			- Mô tả:
+				- Nội dung hiển thị:
+					- Nhập email: `email`
+			- API: /users/verify?email={email}
+			- [Detail](/user/profile_forget_password_get_email.md).
+		2. Quên mật khẩu.
+			- Mô tả:
+				- Input:
+					- Nhập email: `email`
+					- Nhập token: `token`
+					- Nhập mật khẩu mới: `new_password`
+			- API: /users/forgetPassword
+			- [Detail](/user/profile_forget_password_update.md).
 		3. Upload avatar.
 			- Mô tả:
 				- Upload avatar
