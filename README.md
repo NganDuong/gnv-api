@@ -58,6 +58,7 @@
 					- Nhập email: `email`
 					- Nhập token: `token`
 					- Nhập mật khẩu mới: `new_password`
+			- API: /users/forgetPassword?token={token}&email={email}
 			- API: /users/forgetPassword
 			- [Detail](/user/profile_forget_password_update.md).
 		3. Upload avatar.
