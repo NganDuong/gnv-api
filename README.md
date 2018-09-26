@@ -205,3 +205,12 @@
 	4. Xem chi tiết yêu cầu theo trạng thái.
 		- API:/orders/requests/status?read_status={0 | 1}
 		- [Detail](/order/request_status_get.md).
+8. Call log.
+	- Ghi call log.
+		- Mô tả: 
+			- Ghi call log cho đơn hàng hiện tại.
+			- Params:
+				- ID đơn hàng: `order_id`.
+				- Nội dung: `description`.
+		- API: /orders/notes
+		- [Detail](/order/note_create_shipper.md).
