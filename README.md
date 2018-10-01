@@ -204,11 +204,11 @@
 				- Trạng thái xử lý: `status`.
 				- Trạng thái đã xem: `requests` -> `read_status`.
 		- API: /orders/requests
-		- [Detail](../order/request_get.md).
+		- [Detail](/order/request_get.md).
 	2. Xem chi tiết yêu cầu.
 		- API lấy yêu cầu của 1 đơn hàng: /orders/requests?order_id={id}
 		- API lấy 1 yêu cầu của 1 đơn hàng: /orders/requests?order_id={order id}&id={request id}
-		- [Detail](../order/request_get.md).
+		- [Detail](/order/request_get.md).
 8. Call log.
 	- Ghi call log.
 		- Mô tả: 
