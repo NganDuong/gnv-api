@@ -194,17 +194,21 @@
 		- [Detail](/config/order/order_note_reason_get.md)
 6. Xem yêu cầu.
 	1. Xem các yêu cầu.
+		- Mô tả: 
+			- Hiển thị danh sách yêu cầu.
+			- Nội dung hiển thị:
+				- Mã đơn hàng: `order_code`.
+				- Thời gian: `requests` -> `created`.
+				- Tiêu đề: `requests` -> `order_request_type` -> `name`.
+				- Nội dung: `requests` -> `description`.
+				- Trạng thái xử lý: `status`.
+				- Trạng thái đã xem: `requests` -> `read_status`.
 		- API: /orders/requests
-		- [Detail](/order/request_get.md).
+		- [Detail](../order/request_get.md).
 	2. Xem chi tiết yêu cầu.
-		- API: /orders/requests/{id}
-		- [Detail](/order/request_get.md).
-	3. Cập nhật trạng thái đã xem.
-		- API: /orders/requests/{id}
-		- [Detail](/order/request_read.md).
-	4. Xem chi tiết yêu cầu theo trạng thái.
-		- API:/orders/requests/status?read_status={0 | 1}
-		- [Detail](/order/request_status_get.md).
+		- API lấy yêu cầu của 1 đơn hàng: /orders/requests?order_id={id}
+		- API lấy 1 yêu cầu của 1 đơn hàng: /orders/requests?order_id={order id}&id={request id}
+		- [Detail](../order/request_get.md).
 8. Call log.
 	- Ghi call log.
 		- Mô tả: 
