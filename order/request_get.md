@@ -2,7 +2,7 @@
 
 Use to get requests of existed order.
 
-**URL** : `/orders/requests/{id}`
+**URL** : `/orders/requests`
 
 **Method** : `GET`
 
