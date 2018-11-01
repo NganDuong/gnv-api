@@ -43,16 +43,12 @@ Use to calculate order's fee.
     "data": {
         "0": {
             "name": "Service",
-            "amount": 32000
+            "amount": 20000
         },
-        "1": {
-            "name": "COD",
-            "amount": 5000
-        },
-        "service_fee": 32000,
-        "cod_fee": 5000,
-        "insurance_fee": 0,
-        "total": 37000
+        "service_fee": 20000,
+        "before_discount": 20000,
+        "discount": 15000,
+        "total": 5000
     },
     "paging": [],
     "message": "Fees calculated"

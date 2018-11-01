@@ -23,21 +23,9 @@ Use to get coupons.
 ```json
 {
     "success": true,
-    "data": {
-        "id": 1,
-        "code": "GNV123",
-        "is_percent": 1,
-        "rate": 0.5,
-        "use_times": 0,
-        "used_times": 1,
-        "from_date": "2018-07-01T00:00:00+07:00",
-        "to_date": "2018-07-10T00:00:00+07:00",
-        "max_use_per_user": 1,
-        "created": "2018-07-03T14:53:07+07:00",
-        "modified": "2018-07-03T15:15:16+07:00"
-    },
+    "data": [],
     "paging": [],
-    "message": "Coupon is valid"
+    "message": "Can use this coupon"
 }
 ```
 

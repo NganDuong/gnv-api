@@ -254,6 +254,9 @@
 					- Content: `description` & `note_date`
 			- API: /orders/notes?order_id={id}
 			- [Detail](/order/get_notes.md).
+		1. Share đơn hàng.
+			- API: /orders/guests
+			- [Detail](/order/get_for_guests.md).
 	3. Gửi yêu cầu cho 1 đơn hàng.
 		1. Chọn loại yêu cầu.
 			- API: /configs/orders/requests/
@@ -381,6 +384,19 @@
 		2. Kiểm tra coupon.
 			- API: /configs/orders/coupons/check?code={coupon code}&user_id={current user id}
 			- [Detail](/config/coupon/check.md).
+		2. Lấy thông tin coupons có thể sử dụng.
+			- Mô tả: 
+				- Nội dung hiển thị:
+					- Tên: `name`
+					- Mô tả: `description`
+					- Mã: `code`
+					- Phương thức giảm giá: `method` (0 - giảm theo khoảng tiền | 1 - giảm theo phần trăm | 2 - đồng giá)
+					- Mức giảm: `rate`
+					- Ngày có hiệu lực: `public_date`
+					- Ngày hết hạn: `expire_date`
+					- Số lượng tối đa: `use_in_total`
+			- API: /configs/promotions/usable?sender_location_id={id}&receiver_location_id={id}
+			- [Detail](/config/promotion/get_user_usable.md).
 		2. Lấy danh sách gói dịch vụ.
 			- API: /configs/orders/deliveries/services?sender_location_id={id}&receiver_location_id={id}
 			- Example: /configs/orders/deliveries/services?sender_location_id=1&receiver_location_id=1
