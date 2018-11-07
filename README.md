@@ -402,6 +402,14 @@
 			- Example: /configs/orders/deliveries/services?sender_location_id=1&receiver_location_id=1
 			- [Detail](/config/service/get_specific.md).
 		4. Tính phí, tiền.
+			- Mô tả: 
+				- Nội dung hiển thị:
+					- Chi tiết phí: `details`
+						- Tên phí: `name`
+						- Phí:  `amount`
+					- Trước giảm: `discount`
+					- Mức giảm: `discount`
+					- Tổng: `total`
 			- API: /orders/fees/
 			- Example: /orders/fees?&sender_location_id=1&receiver_location_id=1&weight=1&length=1&width=1&height=1&service_id=1&cod=0
 			- [Detail](/order/calculate_fee.md).

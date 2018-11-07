@@ -24,6 +24,7 @@ Use to calculate order's fee.
     "value": [parcel's value],
     "source_location_id": [source_location_id],
     "dest_location_id": [dest_location_id],
+    "fee_payer": [0 | 1],
 }
 ```
 
@@ -41,17 +42,26 @@ Use to calculate order's fee.
 {
     "success": true,
     "data": {
-        "0": {
-            "name": "Service",
-            "amount": 20000
-        },
-        "service_fee": 20000,
+        "details": [
+            {
+                "name": "Dịch vụ",
+                "amount": 20000
+            },
+            {
+                "name": "Thu hộ",
+                "amount": 0
+            },
+            {
+                "name": "Bảo hiểm",
+                "amount": 0
+            }
+        ],
         "before_discount": 20000,
         "discount": 15000,
         "total": 5000
     },
     "paging": [],
-    "message": "Fees calculated"
+    "message": "Đã tính phí"
 }
 ```
 
