@@ -50,7 +50,7 @@
 			- Mô tả:
 				- Nội dung hiển thị:
 					- Nhập email: `email`
-			- API: /users/verify?email={email}
+			- API: /users/forgetPassword?email={email}
 			- [Detail](/user/profile_forget_password_get_email.md).
 		2. Quên mật khẩu.
 			- Mô tả:
