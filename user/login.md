@@ -48,7 +48,7 @@ curl -X POST http://giaonhanviet.local:8080/users/login -i -H "Content-Type: app
             "id": 3,
             "user_code": "G1542189837",
             "username": "ngancustomer",
-            "name": null,
+            "name": "ng,
             "email": "ngan.duong199521@gmail.com",
             "phone": "0325689741",
             "address": "",
