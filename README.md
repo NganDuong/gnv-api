@@ -7,6 +7,7 @@
 	1. Đăng ký.
 		- Mô tả:
 			- Nội dung hiển thị:
+				- Tên shop: `name`
 				- Tên đăng nhập: `username`
 				- Số điện thoại: `phone`
 				- Email: `email`
@@ -25,7 +26,8 @@
 		1. Xem.
 			- Mô tả:
 				- Nội dung hiển thị:
-					- Họ tên: `username`
+					- Tên shop / Họ Tên: `name`
+					- Tên đăng nhập / Username: `username`
 					- Số điện thoại: `phone`
 					- Email: `email`
 			- API: /users/{id}
@@ -33,7 +35,8 @@
 		2. Sửa.
 			- Mô tả:
 				- Nội dung hiển thị:
-					- Họ tên: `username`
+					- Tên shop / Họ Tên: `name`
+					- Tên đăng nhập / Username: `username`
 					- Số điện thoại: `phone`
 					- Email: `email`
 			- API: /users/{id}
