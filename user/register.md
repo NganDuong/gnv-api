@@ -17,6 +17,7 @@ Use to register user with customer role.
 ```json
 {
     "username": "[username]",
+    "name": "[name]",
     "password": "[password in plain text]",
     "email": "[email address]",
     "phone": "[phone number]"
@@ -27,34 +28,26 @@ Use to register user with customer role.
 
 ```json
 {
-  "username": "customer1",
+  "username": "ngan",
+  "name": "ngan duong",
   "password": "123456",
-  "email": "customer1@gnv.com",
-  "phone": "01234567893"
+  "email": "ngan.duong@mail.com",
+  "phone": "009757454636"
 }
 ```
 
 ## Success Response
 
-**Code** : `201 CREATED`
+**Code** : `200 OK`
 
 **Content example**
 
 ```json
 {
     "success": true,
-    "data": {
-        "username": "customer1",
-        "email": "customer1@gnv.com",
-        "phone": "01234567893",
-        "user_code": "G1525932705",
-        "role_id": 5,
-        "created": "2018-05-10T06:11:45+00:00",
-        "modified": "2018-05-10T06:11:45+00:00",
-        "id": 8
-    },
+    "data": [],
     "paging": [],
-    "message": "Registered user"
+    "message": "An activation email has been sent to ngan.duong@mail.com"
 }
 ```
 
