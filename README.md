@@ -280,11 +280,16 @@
 		- Mô tả:
 		- API: /orders/delivery/failed/{id}
 		- [Detail](/shipper/delivery/failed_delivery.md)
-	12. Thêm (Upload hình ảnh).
+	12. Upload hình ảnh giao hàng.
 		- Mô tả:
-			- Upload hình ảnh giao hàng/ chữ ký xác nhận.
-		- API: /orders/pickup/upload/{id}
-		- [Detail](/shipper/pickup/upload_photo.md)
+			- Upload hình ảnh giao hàng.
+		- API: /orders/delivery/upload/{id}
+		- [Detail](../shipper/delivery/upload_photo.md)
+	12. Upload hình ảnh chữ ký xác nhận.
+		- Mô tả:
+			- Upload hình ảnh chữ ký xác nhận.
+		- API: /orders/delivery/upload/sign/{id}
+		- [Detail](../shipper/delivery/upload_photo.md)
 	13. Chọn nguyên nhân thất bại.
 		- Mô tả:
 		- API: /configs/orders/notes/
