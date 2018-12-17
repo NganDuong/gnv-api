@@ -251,7 +251,7 @@
 				- Nội dung hiển thị:
 					- Ngày: `created`
 					- Header: `field`
-					- Content: `description` & `note_date`
+					- Content: `description`, `note_date`, `note`
 			- API: /orders/notes?order_id={id}
 			- [Detail](/order/get_notes.md).
 		1. Share đơn hàng.
@@ -454,7 +454,7 @@
 		- [Detail](/user/notification_get.md).
 	- Đánh dấu đã xem thông báo.
 		- Mô tả: 
-			- Đánh dấu đã xem 01 thông báo.
+			- Đánh dấu đã xem thông báo.
 		- API: /users/notifications/read/{id}
 		- [Detail](/user/notification_read.md).
 8. Locations.
