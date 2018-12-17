@@ -7,6 +7,7 @@
 	1. Đăng ký.
 		- Mô tả:
 			- Nội dung hiển thị:
+				- Tên shop: `name`
 				- Tên đăng nhập: `username`
 				- Số điện thoại: `phone`
 				- Email: `email`
@@ -25,7 +26,8 @@
 		1. Xem.
 			- Mô tả:
 				- Nội dung hiển thị:
-					- Họ tên: `username`
+					- Tên shop / Họ Tên: `name`
+					- Tên đăng nhập / Username: `username`
 					- Số điện thoại: `phone`
 					- Email: `email`
 			- API: /users/{id}
@@ -33,7 +35,8 @@
 		2. Sửa.
 			- Mô tả:
 				- Nội dung hiển thị:
-					- Họ tên: `username`
+					- Tên shop / Họ Tên: `name`
+					- Tên đăng nhập / Username: `username`
 					- Số điện thoại: `phone`
 					- Email: `email`
 			- API: /users/{id}
@@ -50,7 +53,7 @@
 			- Mô tả:
 				- Nội dung hiển thị:
 					- Nhập email: `email`
-			- API: /users/verify?email={email}
+			- API: /users/forgetPassword?email={email}
 			- [Detail](/user/profile_forget_password_get_email.md).
 		2. Quên mật khẩu.
 			- Mô tả:
@@ -402,6 +405,14 @@
 			- Example: /configs/orders/deliveries/services?sender_location_id=1&receiver_location_id=1
 			- [Detail](/config/service/get_specific.md).
 		4. Tính phí, tiền.
+			- Mô tả: 
+				- Nội dung hiển thị:
+					- Chi tiết phí: `details`
+						- Tên phí: `name`
+						- Phí:  `amount`
+					- Trước giảm: `discount`
+					- Mức giảm: `discount`
+					- Tổng: `total`
 			- API: /orders/fees/
 			- Example: /orders/fees?&sender_location_id=1&receiver_location_id=1&weight=1&length=1&width=1&height=1&service_id=1&cod=0
 			- [Detail](/order/calculate_fee.md).

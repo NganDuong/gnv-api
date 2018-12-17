@@ -45,46 +45,30 @@ curl -X POST http://giaonhanviet.local:8080/users/login -i -H "Content-Type: app
     "success": true,
     "data": {
         "user": {
-            "id": 1,
-            "user_code": "GNV_globaladmin",
-            "username": "admin",
-            "email": "admin@gnv.vn",
-            "phone": "0123456789",
-            "address": "104 NCT",
-            "location_id": 1,
-            "role_id": 1,
+            "id": 3,
+            "user_code": "G1542189837",
+            "username": "ngancustomer",
+            "name": "ngan duong",
+            "email": "ngan.duong199521@gmail.com",
+            "phone": "0325689741",
+            "address": "",
+            "role_id": 6,
             "status": 1,
-            "created": "2018-03-31T10:00:00+00:00",
-            "modified": "2018-03-31T10:00:00+00:00",
-            "avatar": {
-                "id": 13,
-                "target_id": 1,
-                "target_type": "Users",
-                "field": "avatar",
-                "path": "/home/nganduong/Projects/gnv-api/webroot/uploads/files//avatar/1.png",
-                "created": "2018-05-04T10:45:33+00:00",
-                "modified": "2018-05-04T11:01:01+00:00"
-            },
-            "location": {
-                "id": 1,
-                "support_type_id": 3,
-                "area_type_id": 1,
-                "district_id": 1,
-                "province_id": 1,
-                "created": "2018-05-07T08:26:54+00:00",
-                "modified": "2018-05-08T06:15:51+00:00"
-            },
+            "created": "2018-11-14T17:03:57",
+            "modified": "2018-11-14T17:03:57",
+            "user_group_details": [],
+            "avatar": null,
             "role": {
-                "id": 1,
-                "name": "admin",
-                "created": "2018-05-08T08:02:55+00:00",
-                "modified": "2018-05-08T08:02:55+00:00"
+                "id": 6,
+                "name": "customer",
+                "created": "2018-05-27T19:09:44",
+                "modified": "2018-05-27T19:09:44"
             }
         },
-        "token": "Token"
+        "token": "GNV eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMsImV4cCI6MTU0MjQ0MzcxOH0.w_EyEiKufLMlYW5eUDGjFUEMWMfP666J57g1yvHWCkg"
     },
     "paging": [],
-    "message": "Login success"
+    "message": "Đăng nhập thành công"
 }
 ```
 

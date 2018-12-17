@@ -2,7 +2,7 @@
 
 Use to update user's infomation.
 
-**URL** : `users/verify?email={email}`
+**URL** : `users/forgetPasswor?email={email}`
 
 **Method** : `GET`
 

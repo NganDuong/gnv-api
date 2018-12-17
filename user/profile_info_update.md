@@ -16,6 +16,7 @@ Use to update user's infomation.
 
 ```json
 {
+    "name": "[name]",
     "username": "[username]",
     "password": "[password in plain text]",
     "email": "[email address]",
@@ -46,6 +47,7 @@ Use to update user's infomation.
         "id": 1,
         "user_code": "GNV_globaladmin",
         "username": "admin",
+        "name": "name",
         "email": "admin@gnv.vn",
         "phone": "0123456789",
         "address": "104 NCT",

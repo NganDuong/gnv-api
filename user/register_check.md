@@ -2,7 +2,7 @@
 
 Use to check user's infomation before register.
 
-**URL** : `users/check`
+**URL** : `/users/register/check`
 
 **Method** : `GET`
 
@@ -14,11 +14,11 @@ Use to check user's infomation before register.
 
 **Data example**                            
 
-    - Kiểm tra username: /users/check?username={username}
+    - Kiểm tra username: /users/register/check?username={username}
 
-    - Kiểm tra số điện thoại: /users/check?phone={phone}
+    - Kiểm tra số điện thoại: /users/register/check?phone={phone}
 
-    - Kiểm tra email: /users/check?email={email}
+    - Kiểm tra email: /users/register/check?email={email}
 
 ## Success Response
 
