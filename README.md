@@ -203,9 +203,15 @@
 					- Mã đơn hàng: `order_code`
 					- Tuyến đơn hàng: `route_text`
 					- Thời gian lấy thực tế:
+						- Ca: `pickup_session`
+						- Ngày: `pickup_date`
+					- Thời gian giao thực tế:
+						- Ca: `delivery_session`
+						- Ngày: `delivery_date`
+					- Thời gian lấy dự kiến:
 						- Ca: `expected_pickup_session`
 						- Ngày: `expected_pickup_date`
-					- Thời gian giao thực tế:
+					- Thời gian giao dự kiến:
 						- Ca: `expected_delivery_session`
 						- Ngày: `expected_delivery_date`
 					- Thông tin người gửi:
@@ -462,12 +468,14 @@
 				- Nội dung: `order_notification` -> `content`.
 				- Trạng thái: `status`.
 		- API: /users/notifications
-		- [Detail](/user/notification_get.md).
+		- [Detail](../user/notification_get.md).
 	- Đánh dấu đã xem thông báo.
 		- Mô tả: 
 			- Đánh dấu đã xem thông báo.
+			- Nội dung:
+				- Mã thông báo: `ids`.
 		- API: /users/notifications/read/{id}
-		- [Detail](/user/notification_read.md).
+		- [Detail](../user/notification_read.md).
 8. Locations.
 	- Xem danh sách provinces.
 		- Mô tả: 
