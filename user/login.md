@@ -25,7 +25,7 @@ Use to log an existed user in.
 
 ```json
 {
-    "username": "admin",
+    "username": "shipper",
     "password": "password"
 }
 ```
@@ -45,46 +45,29 @@ curl -X POST http://api.gnv.findsoft.vn/users/login -i -H "Content-Type: applica
     "success": true,
     "data": {
         "user": {
-            "id": 1,
-            "user_code": "GNV_globaladmin",
-            "username": "admin",
-            "email": "admin@gnv.vn",
-            "phone": "0123456789",
-            "address": "104 NCT",
-            "location_id": 1,
-            "role_id": 1,
+            "id": 3,
+            "user_code": "G1543287056",
+            "name": "",
+            "username": "shipper",
+            "email": "shipper@mail.com",
+            "phone": "06666666666",
+            "address": "",
+            "role_id": 3,
             "status": 1,
-            "created": "2018-03-31T10:00:00+00:00",
-            "modified": "2018-03-31T10:00:00+00:00",
-            "avatar": {
-                "id": 13,
-                "target_id": 1,
-                "target_type": "Users",
-                "field": "avatar",
-                "path": "/home/nganduong/Projects/gnv-api/webroot/uploads/files//avatar/1.png",
-                "created": "2018-05-04T10:45:33+00:00",
-                "modified": "2018-05-04T11:01:01+00:00"
-            },
-            "location": {
-                "id": 1,
-                "support_type_id": 3,
-                "area_type_id": 1,
-                "district_id": 1,
-                "province_id": 1,
-                "created": "2018-05-07T08:26:54+00:00",
-                "modified": "2018-05-08T06:15:51+00:00"
-            },
+            "created": "2018-11-27T02:50:56+07:00",
+            "modified": "2018-11-27T02:50:56+07:00",
+            "avatar": null,
             "role": {
-                "id": 1,
-                "name": "admin",
-                "created": "2018-05-08T08:02:55+00:00",
-                "modified": "2018-05-08T08:02:55+00:00"
+                "id": 3,
+                "name": "shipper",
+                "created": "2018-05-27T12:09:27+07:00",
+                "modified": "2018-05-27T12:09:27+07:00"
             }
         },
-        "token": "Token"
+        "token": "GNV eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMsImV4cCI6MTU0NTExNDI3N30.Q8vt0w0GqcdCQjocYrV3eYOn8b-dGGhYWlN5XBSzmX8"
     },
     "paging": [],
-    "message": "Login success"
+    "message": "Đăng nhập thành công"
 }
 ```
 

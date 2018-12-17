@@ -25,33 +25,45 @@ Use to get shipper's current DRS.
     "success": true,
     "data": [
         {
-            "owner_id": 5,
-            "receiver_name": "B",
-            "receiver_phone": "0123456789",
-            "receiver_address": "104 NCT",
-            "receiver_location_id": 1,
-            "receiver_longitude": 0,
-            "receiver_latitude": 0,
+            "owner_id": 2,
+            "receiver_phone": "05614981981",
+            "receiver_address": "178/8M Điện Biên Phủ, Phường 21, Bình Thạnh, Hồ Chí Minh, Việt Nam",
+            "receiver_location_id": 21,
+            "receiver_longitude": 106.713325,
+            "receiver_name": "mi",
+            "receiver_latitude": 10.800436,
+            "receiver_address_detail": "178/8M Điện Biên Phủ, Phường 21, Bình Thạnh, Hồ Chí Minh, Việt Nam",
+            "flag": 1,
             "total": 1,
-            "receiver_address_detail": "104 NCT, Quận 1, Hồ Chí Minh",
+            "total_delivered": 0,
+            "total_failed": 0,
             "orders": [
                 {
-                    "id": 7,
-                    "order_code": "O1528100633",
-                    "order_status_id": 9,
-                    "pickup_photos": [],
-                    "cash": 6000,
-                    "status": "Delivered",
-                    "session": "afternoon"
+                    "id": 1,
+                    "order_code": "P1544498831",
+                    "user_code": "G1542281784",
+                    "fee_paid": 0,
+                    "order_status_id": 7,
+                    "discount": 0,
+                    "flag": 1,
+                    "delivery_photos": [],
+                    "cod_fee": 0,
+                    "return_fee": 0,
+                    "service_fee": 20000,
+                    "cash": 120000,
+                    "status": "Chuẩn bị giao",
+                    "session": "Ca chiều"
                 }
             ],
-            "total_delivered": 1,
-            "group_status_id": 9,
-            "group_status": "Delivered"
+            "group_status_id": 7,
+            "group_status": "Chuẩn bị giao"
         }
     ],
-    "paging": [],
-    "message": "Found DRS(s)"
+    "paging": {
+        "total": 1,
+        "total_page": 1
+    },
+    "message": "Found orders"
 }
 ```
 

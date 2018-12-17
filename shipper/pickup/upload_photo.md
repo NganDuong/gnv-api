@@ -3,6 +3,7 @@
 Use to upload a pickup photo.
 
 **URL** : `/orders/pickup/upload/{id}`
+**URL** : `/orders/pickup/upload/sign{id}`
 
 **Method** : `POST`
 
