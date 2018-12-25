@@ -474,14 +474,14 @@
 					- Tin tức đơn hàng: 2
 					- Yêu cầu đơn hàng: 1
 		- API: /users/notifications
-		- [Detail](../user/notification_get.md).
+		- [Detail](/user/notification_get.md).
 	- Đánh dấu đã xem thông báo.
 		- Mô tả: 
 			- Đánh dấu đã xem thông báo.
 			- Nội dung:
 				- Mã thông báo: `ids`.
 		- API: /users/notifications/read/{id}
-		- [Detail](../user/notification_read.md).
+		- [Detail](/user/notification_read.md).
 8. Locations.
 	- Xem danh sách provinces.
 		- Mô tả: 
