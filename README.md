@@ -467,6 +467,12 @@
 				- Tiêu đề: `order_notification` -> `header`.
 				- Nội dung: `order_notification` -> `content`.
 				- Trạng thái: `status`.
+				- Mã tin tức | tin tức đơn hàng | yêu cầu đơn hàng: `order_notification` -> `target_id`.
+				- Link: `reference`
+				- Loại thông báo: `order_notification` -> `target_type`.
+					- Tin tức: 3
+					- Tin tức đơn hàng: 2
+					- Yêu cầu đơn hàng: 1
 		- API: /users/notifications
 		- [Detail](../user/notification_get.md).
 	- Đánh dấu đã xem thông báo.
