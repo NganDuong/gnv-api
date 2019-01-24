@@ -457,6 +457,18 @@
 					- Xem đơn hàng: `detail`
 			- API: /orders/transferedMoneys
 			- [Detail](/order/transfered_money.md).
+	1. Đối soát sắp tới (new).
+		- Xem thông tin.
+			- Mô tả: 
+				- Lấy thông tin đối soát sắp tới của shop.
+				- Nội dung hiển thị:
+					- Tên nhóm: `name`
+					- Chi tiết thông tin của nhóm: `details`
+						- Tên cột: `name`
+						- Giá trị hiển thị: `value`
+						- Hình thức hiển thị: `type` (0 - giá trị thông thường | 1 - link/url)
+			- API: /users/settlements/open
+			- [Detail](/user/settlement_get.md).
 7. Thông báo.
 	- Xem danh sách thông báo.
 		- Mô tả: 
