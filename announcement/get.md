@@ -25,49 +25,19 @@ Use to delete a announcement.
     "success": true,
     "data": [
         {
-            "id": 7,
-            "public_date": "2018-11-07T11:34:24+07:00",
-            "expire_date": "2018-11-11T00:00:00+07:00",
+            "id": 3,
+            "public_date": "2019-03-01T00:00:00",
+            "expire_date": "2019-03-31T00:00:00",
             "highlight": 0,
             "status": 1,
             "user_group_id": 0,
-            "created": "2018-11-07T10:39:37+07:00",
-            "modified": "2018-11-07T11:34:24+07:00",
-            "contents": [
-                {
-                    "id": 1,
-                    "announcement_id": 7,
-                    "content_type": 1,
-                    "content": "NEW BRAND",
-                    "created": "2018-11-07T10:39:37+07:00",
-                    "modified": "2018-11-07T10:39:37+07:00"
-                },
-                {
-                    "id": 2,
-                    "announcement_id": 7,
-                    "content_type": 2,
-                    "content": "new opening @ 07/11/2018",
-                    "created": "2018-11-07T10:39:37+07:00",
-                    "modified": "2018-11-07T10:39:37+07:00"
-                },
-                {
-                    "id": 3,
-                    "announcement_id": 7,
-                    "content_type": 3,
-                    "content": "Discount 10% for 10 orders",
-                    "created": "2018-11-07T10:39:37+07:00",
-                    "modified": "2018-11-07T10:39:37+07:00"
-                }
-            ],
-            "banner": {
-                "id": 7,
-                "target_id": 7,
-                "target_type": "Announcements",
-                "field": "Banner",
-                "path": "/uploads/files/banners/images.jpeg",
-                "created": "2018-11-07T10:39:37+07:00",
-                "modified": "2018-11-07T10:39:37+07:00"
-            }
+            "reference": "https://vnexpress.net/",
+            "created": "2019-03-09T14:41:00",
+            "modified": "2019-03-09T14:41:00",
+            "contents": [],
+            "title": "Test tin tức",
+            "brief": "Hello",
+            "banner_img": "/uploads/files/annoucements/banners/TuyenDungCS1000x1000.png"
         }
     ],
     "paging": {
