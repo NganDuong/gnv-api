@@ -495,21 +495,21 @@
 		- API: /users/notifications/read/{id}
 		- [Detail](/user/notification_read.md).
 	- Xem danh sách tin tức.
-			- Mô tả:
-				- Lấy danh sách tin tức.
-				- Params:
-					- Ngày hết hạn: "expire_date"
-					- Tiêu đề: "title"
-					- Mô tả: "brief"
-					- Nội dung: "content"
-					- Ngày công bố: "public_date"
-					- Có hiển thị popup hay không: "highlight" (0 - không | 1 - có)
-					- Trạng thái: "status" (0 - deactive | 1 - active)
-					- Nhóm user sẽ nhận thông báo: "user_group_id" (0 - tất cả shop | id của nhóm có sẵn)
-					- Liên kết ngoài: "reference"
-					- Banner: `banner_img`
-			- API: /announcements/{id}
-			- [Detail](/announcement/get.md).
+		- Mô tả:
+			- Lấy danh sách tin tức.
+			- Nội dung:
+				- Ngày hết hạn: "expire_date"
+				- Tiêu đề: "title"
+				- Mô tả: "brief"
+				- Nội dung: "content"
+				- Ngày công bố: "public_date"
+				- Có hiển thị popup hay không: "highlight" (0 - không | 1 - có)
+				- Trạng thái: "status" (0 - deactive | 1 - active)
+				- Nhóm user sẽ nhận thông báo: "user_group_id" (0 - tất cả shop | id của nhóm có sẵn)
+				- Liên kết ngoài: "reference"
+				- Banner: `banner_img`
+		- API: /announcements/{id}
+		- [Detail](/announcement/get.md).
 8. Locations.
 	- Xem danh sách provinces.
 		- Mô tả: 
